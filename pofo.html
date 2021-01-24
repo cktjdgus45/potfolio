@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio for cktjdgus45">
+    <meta name="author" content="cktjdgus45">
+    <title>cktjdgus45's Portfolio website</title>
+    <script src="https://kit.fontawesome.com/920f3667b2.js" crossorigin="anonymous"></script>
+    <link href='//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css' rel='stylesheet' type='text/css'>
+    <link rel="icon" href="./imgs/favicon.png" type="image/png">
+    <link rel="stylesheet" href="style.css">
+    <script src="./main.js" defer></script>
+</head>
+
+<body>
+    <nav id="navbar">
+        <div class="navbar__logo">
+            <img src="./imgs/favicon.png" alt="logo">
+            <a href="#">Pooh</a>
+        </div>
+        <ul class="navbar__menu">
+            <li class="navbar__menu__item active">Home</li>
+            <li class="navbar__menu__item">About</li>
+            <li class="navbar__menu__item">Skills</li>
+            <li class="navbar__menu__item">My work</li>
+            <li class="navbar__menu__item">Testimonial</li>
+            <li class="navbar__menu__item">Contact</li>
+        </ul>
+    </nav>
+    <section id="home">
+        <img src="./testimonial/people1.jpg" alt="avatar pofile" class="home__avatar">
+        <h1 class="home__title">Hello,<br />I'm Dream Coder</h1>
+        <h2 class="home__description">A Dream Coder who want to be a coder.</h2>
+        <button class="home__contact">
+            CONTACT ME
+        </button>
+    </section>
+    <section id="about">
+        <h1>About me</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In nisi, hic atque culpa incidunt repudiandae at
+            adipisci a? Autem quas est, eius alias dolorum incidunt ipsam consectetur quo non! Dicta!</p>
+        <div class="about__majors">
+            <div class="major">
+                <div class="major__icon"><i class="fab fa-html5"></i></div>
+                <h2 class="major__title">Front-end</h2>
+                <p class="major__description">HTML,CSS,Javascript,TypeScript,Web APIs</p>
+            </div>
+            <div class="major">
+                <div class="major__icon"><i class="fab fa-react"></i></div>
+                <h2 class="major__title">Library</h2>
+                <p class="major__description">React</p>
+            </div>
+            <div class="major">
+                <div class="major__icon"><i class="fas fa-server"></i></div>
+                <h2 class="major__title">Back-end</h2>
+                <p class="major__description">NodeJS</p>
+            </div>
+        </div>
+        <div class="about__jobs">
+            <img src="./imgs/yongin-logo.png" alt="yongin University logo">
+            <div class="job">
+                <p class="job__name">Currently studying at YongIn University</p>
+                <p class="job__period">2016.3.1 ~ Until now</p>
+            </div>
+        </div>
+    </section>
+    <section id="skills">
+        <h1>Skills</h1>
+        <h2>Skills & Attributes</h2>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates, dolor. Nobis explicabo eum cupiditate?
+            Explicabo suscipit tempore quos, facilis nobis odio ducimus veritatis modi saepe quo dolor libero enim
+            similique!</p>
+        <div class="skillset">
+            <div class="skillset__left">
+                <h1 class="skillset__title">Skills</h1>
+                <div class="skill">
+                    <div class="skill__description">
+                        <span>HTML</span>
+                        <span>90%</span>
+                    </div>
+                    <div class="skill__bar">
+                        <div class="skill__value"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <div class="skill__description">
+                        <span>CSS</span>
+                        <span>80%</span>
+                    </div>
+                    <div class="skill__bar">
+                        <div class="skill__value"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <div class="skill__description">
+                        <span>Javascript</span>
+                        <span>50%</span>
+                    </div>
+                    <div class="skill__bar">
+                        <div class="skill__value"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="skillset__right">
+                <div class="tools">
+                    <h1 class="skillset__title">Tools</h1>
+                    <ul class="tools__list">
+                        <li><span>Visual Studio Code</span></li>
+                        <li><span>Sketch app</span></li>
+                    </ul>
+                </div>
+                <div class="Etc">
+                    <h1 class="skillset__title">Etc</h1>
+                    <ul class="Etc__list">
+                        <li><span>Math</span></li>
+                        <li><span>Git</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="work">
+        <h1>My work</h1>
+        <h2>Projects</h2>
+        <div class="work__categories">
+            <button class="category__btn">All <span class="category__count">8</span></button>
+            <button class="category__btn">Front-end <span class="category__count">4</span></button>
+            <button class="category__btn">Library <span class="category__count">3</span></button>
+            <button class="category__btn">Back-end <span class="category__count">1</span></button>
+        </div>
+        <div class="work__projects">
+            <a href="https://github.com/cktjdgus45/potfolio" target="blank" class="project">
+                <img class="project__img" src="./projects/project1.png" alt="project1.png">
+                <div class="project__description">
+                    <h3>Youtube Site</h3>
+                    <span>Clone coding with HTML and CSS</span>
+                </div>
+            </a>
+            <a href="https://github.com/cktjdgus45/potfolio" target="blank" class="project">
+                <img class="project__img" src="./projects/project2.png" alt="project2.png">
+                <div class="project__description">
+                    <h3>Twitter Site</h3>
+                    <span>Clone coding with HTML and CSS</span>
+                </div>
+            </a>
+            <a href="https://github.com/cktjdgus45/potfolio" target="blank" class="project">
+                <img class="project__img" src="./projects/project3.png" alt="project3.png">
+                <div class="project__description">
+                    <h3>Naver Whale Site</h3>
+                    <span>Clone coding with HTML and CSS</span>
+                </div>
+            </a>
+            <a href="https://github.com/cktjdgus45/potfolio" target="blank" class="project">
+                <img class="project__img" src="./projects/project4.png" alt="project4.png">
+                <div class="project__description">
+                    <h3>Naver Site</h3>
+                    <span>Clone coding with HTML and CSS</span>
+                </div>
+            </a>
+            <a href="https://github.com/cktjdgus45/potfolio" target="blank" class="project">
+                <img class="project__img" src="./projects/project5.png" alt="project5.png">
+                <div class="project__description">
+                    <h3>Instagram Site</h3>
+                    <span>Clone coding with HTML and CSS</span>
+                </div>
+            </a>
+            <a href="https://github.com/cktjdgus45/potfolio" target="blank" class="project">
+                <img class="project__img" src="./projects/project6.png" alt="project6.png">
+                <div class="project__description">
+                    <h3>Face Book Site</h3>
+                    <span>Clone coding with HTML and CSS</span>
+                </div>
+            </a>
+            <a href="https://github.com/cktjdgus45/potfolio" target="blank" class="project">
+                <img class="project__img" src="./projects/project7.png" alt="project7.png">
+                <div class="project__description">
+                    <h3>Github Site</h3>
+                    <span>Clone coding with HTML and CSS</span>
+                </div>
+            </a>
+            <a href="https://github.com/cktjdgus45/potfolio" target="blank" class="project">
+                <img class="project__img" src="./projects/project8.png" alt="project8.png">
+                <div class="project__description">
+                    <h3>Google Site</h3>
+                    <span>Clone coding with HTML and CSS</span>
+                </div>
+            </a>
+        </div>
+    </section>
+    <section id="testimonials">
+        <h1>Testimonials</h1>
+        <h2>see what they say about me</h2>
+        <div class="testimonials">
+            <div class="testimonial">
+                <img src="./testimonial/people1.jpg" alt="People">
+                <p class="testimonial__speeach-bubble">Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci
+                    amet illum velit incidunt, a saepe.
+                    Totam expedita autem ut, dolore molestias dignissimos quis placeat, ullam accusantium odit sit
+                    quidem similique?</p>
+                <p class="name"><span>pooh</span> / TigerSpike</p>
+            </div>
+            <div class="testimonial">
+                <img src="./testimonial/people1.jpg" alt="People">
+                <p class="testimonial__speeach-bubble">Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci
+                    amet illum velit incidunt, a saepe.
+                    Totam expedita autem ut, dolore molestias dignissimos quis placeat, ullam accusantium odit sit
+                    quidem similique?</p>
+                <p class="name"><span>pooh</span> / TigerSpike</p>
+            </div>
+        </div>
+    </section>
+    <section id="contact">
+        <h1 class="contact__title">Let's talk</h1>
+        <h2 class="contact__email">cktjdgus45@naver.com</h2>
+        <div class="contact__links">
+            <a href="https://github.com/cktjdgus45/potfolio">
+                <i class="fab fa-github"></i>
+            </a>
+        </div>
+        <p class="contact__right">2021 Dream coder cha - All rights reserved</p>
+    </section>
+</body>
+
+</html>
