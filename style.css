@@ -36,14 +36,12 @@
 h1 {
     font-size: var(--font-large);
     font-weight: var(--weight-bold);
-    color: var(--color-black);
     margin: 16px 0px;
   }
   
 h2 {
   font-size: var(--font-medium);
   font-weight: var(--weight-semi-bold);
-  color: var(--color-black);
   margin: 8px 0;
 }
 
@@ -188,9 +186,15 @@ li {
 .section{
   text-align: center;
   padding: 50px;
+  margin: 0 auto;
+}
+
+.section__container{
   max-width: 1200px;
   margin: 0 auto;
 }
+
+/* about */
 
 .about__majors{
   display: flex;
@@ -243,3 +247,80 @@ li {
   color: var(--color-dark-grey);
 }
 
+
+/* skills */
+
+#skills{
+  background-color: var(--color-yellow);
+  padding: 100px 0px;
+}
+#skills p{
+  font-size: var(--font-small);
+  max-width: 900px;
+  margin: 0 auto;
+}
+#skills h1{
+  margin: 0;
+}
+
+.skillset{
+  display: flex;
+  width: 90%;
+  height: 400px;
+  margin: 0 auto;
+  margin-top: 40px;
+  color: var(--color-white);
+}
+
+.skillset__title{
+  padding-top: 25px;
+  padding-bottom: 10px;
+  font-size: var(--font-small);
+  margin-bottom: 12px;
+}
+
+
+.skillset__right{
+  flex-basis: 40%;
+}
+
+.skillset__right .tools{
+  height: 60%;
+  background-color: var(--color-grey);
+}
+
+.skillset__right .Etc{
+  height: 40%;
+  background-color: var(--color-light-grey);
+}
+
+.tools__list, .Etc__list , .skill__description{
+  font-size: var(--font-micro);
+  font-weight: var(--weight-regular);
+}
+
+.skillset__left{
+  flex-basis: 60%;
+  background-color: var(--color-dark-grey);
+  padding: 0px 50px;
+}
+
+.skill{
+  margin-bottom: 15px;
+}
+
+.skill__description{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 3px;
+}
+
+.skill__bar,.skill__value{
+  width: 100%;
+  height: 3px;
+  background-color: var(--color-grey);
+  border-radius: 100px;
+}
+.skill__value{
+  background-color: var(--color-orange);
+}
