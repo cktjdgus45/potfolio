@@ -192,7 +192,7 @@ li {
 }
 
 .section__container{
-  max-width: 1200px;
+  max-width: 1216px;
   margin: 0 auto;
 }
 
@@ -472,7 +472,7 @@ li {
   color: var(--color-dark-pink);
 }
 
-/* section */
+/* contact */
 
 #contact{
   background-color: var(--color-pink);
