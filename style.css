@@ -14,7 +14,8 @@
     --color-yellow: #fff7d1;
     --color-orange: #feb546;
     --color-black: #000000;
-  
+    --color-dark-blue:rgb(95,158,160);
+
     /* Font size */
     --font-large: 48px;
     --font-medium: 28px;
@@ -182,3 +183,63 @@ li {
 .home__contact:hover{
   background: rgba(255, 255, 255, 0.1);
 }
+
+/* Section common */
+.section{
+  text-align: center;
+  padding: 50px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.about__majors{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 70px 0px;
+}
+.major{
+  min-width: 200px;
+}
+
+.major__icon{
+  font-size: 50px;
+  color:var(--color-dark-blue);
+  margin: 0 auto;
+  width: 150px;
+  height: 150px;
+  line-height: 150px;
+  border: 1px solid var(--color-dark-blue);
+  border-radius: 50%;
+}
+
+.major__icon i {
+  transition: all 300ms ease;
+}
+
+.major__icon:hover i{
+  transform: rotate(-30deg) scale(1.2,1.2);
+  color: var(--color-blue);
+}
+
+.major__description{
+  color: var(--color-dark-grey);
+  font-size: var(--font-small);
+}
+
+.about__jobs{
+  display: flex;
+  align-items: center;
+  text-align: start;
+}
+.job__logo{
+  width: 80px;
+  height: 80px;
+  background: url(./imgs/yongin-logo.png) center/cover no-repeat;
+}
+
+.job__period{
+  font-size: var(--font-micro);
+  color: var(--color-dark-grey);
+}
+
