@@ -15,6 +15,7 @@
     --color-orange: #feb546;
     --color-black: #000000;
     --color-dark-blue:rgb(95,158,160);
+    --color-light-green:#C5DFD3;
 
     /* Font size */
     --font-large: 48px;
@@ -112,7 +113,9 @@ li {
 /* navvar */
 
 #navbar{
-  background: url(./imgs/bg.png) center/cover no-repeat;
+  z-index: 200;
+  transition: background-color var(--animation-duration) ease-in-out;
+  position: fixed;
   width: 100%;
   display: flex;
   align-items: center;
@@ -122,6 +125,11 @@ li {
   font-weight: var(--weight-semi-bold);
   color: var(--color-white);
 }
+
+#navbar.light-color{
+  background-color: var(--color-light-green);
+}
+
 .navbar__logo{
   display: flex;
   align-items: center;
@@ -139,7 +147,6 @@ li {
 }
 
 .navbar__menu__item{
-  width: 100%;
   cursor: pointer;
   padding: 10px 20px;
   border-radius: var(--border-radius-size);
@@ -175,6 +182,7 @@ li {
 .home__avatar{
   width: 250px;
   height: 250px;
+  margin-top: 60px;
   border-radius: 50%;
   border: 1px solid var(--color-white);
 }
