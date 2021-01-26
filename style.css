@@ -176,9 +176,10 @@ li {
   background: url(./imgs/bg.png) center/cover no-repeat;
   text-align: center;
   font-weight: var(--weight-bold);
+}
+.home__container{
   padding: 40px 0px;
 }
-
 .home__avatar{
   width: 250px;
   height: 250px;
