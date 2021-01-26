@@ -2,19 +2,26 @@ const nav = document.querySelector('#navbar');
 const homeContent = document.querySelector('.home__container');
 const contactBtn = homeContent.querySelector('.home__contact');
 const navMenu = document.querySelector('.navbar__menu');
+const returnBtn = document.querySelector('.return-button');
 
+const homeHeight = homeContent.getBoundingClientRect().bottom;
 
 document.addEventListener('scroll', () => {
-    const currentScrollPos = window.scrollY;
-    changeNav(currentScrollPos);
-    changeHome(currentScrollPos);
+    handleNavScroll();
+    handleHomeScroll();
+    showReturnBtn();
+})
+
+//click on "return" button after scroll home
+returnBtn.addEventListener('click', (event) => {
+    window.scrollTo({ top: 0, behavior: 'smooth' })
 })
 
 //change nav bgColor when scroll nav
 
-function changeNav(currentScrollPos) {
+function handleNavScroll() {
     const navHeight = nav.getBoundingClientRect().bottom;
-    if (currentScrollPos > navHeight) {
+    if (window.scrollY > navHeight) {
         nav.classList.add('light-color');
     } else {
         nav.classList.remove('light-color');
@@ -22,18 +29,26 @@ function changeNav(currentScrollPos) {
 }
 //fade away slowly when scroll home
 
-function changeHome(currentScrollPos) {
-    const homeHeight = homeContent.getBoundingClientRect().bottom;
-    homeContent.style.opacity = 1 - (currentScrollPos / homeHeight);
+function handleHomeScroll() {
+    homeContent.style.opacity = 1 - (window.scrollY / homeHeight);
+}
+
+function showReturnBtn() {
+    if (window.scrollY > homeHeight / 2) {
+        returnBtn.classList.add('showing');
+    } else {
+        returnBtn.classList.remove('showing');
+    }
 }
 
 //scroll to section when clicked.
 
 navMenu.addEventListener('click', (event) => {
     const link = event.target.dataset.link;
-    if (link) {
-        scrollIntoView(link);
+    if (link == null) {
+        return;
     }
+    scrollIntoView(link);
 })
 
 contactBtn.addEventListener('click', () => {
