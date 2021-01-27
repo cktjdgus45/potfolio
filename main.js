@@ -1,8 +1,6 @@
+
 const nav = document.querySelector('#navbar');
 const homeContent = document.querySelector('.home__container');
-const contactBtn = homeContent.querySelector('.home__contact');
-const navMenu = document.querySelector('.navbar__menu');
-const returnBtn = document.querySelector('.return-button');
 
 const homeHeight = homeContent.getBoundingClientRect().bottom;
 
@@ -10,11 +8,6 @@ document.addEventListener('scroll', () => {
     handleNavScroll();
     handleHomeScroll();
     showReturnBtn();
-})
-
-//click on "return" button after scroll home
-returnBtn.addEventListener('click', (event) => {
-    window.scrollTo({ top: 0, behavior: 'smooth' })
 })
 
 //change nav bgColor when scroll nav
@@ -28,10 +21,17 @@ function handleNavScroll() {
     }
 }
 //fade away slowly when scroll home
-
 function handleHomeScroll() {
     homeContent.style.opacity = 1 - (window.scrollY / homeHeight);
 }
+
+//click on "return" button after scroll home
+
+const returnBtn = document.querySelector('.return-button');
+
+returnBtn.addEventListener('click', (event) => {
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+})
 
 function showReturnBtn() {
     if (window.scrollY > homeHeight / 2) {
@@ -42,6 +42,7 @@ function showReturnBtn() {
 }
 
 //scroll to section when clicked.
+const navMenu = document.querySelector('.navbar__menu');
 
 navMenu.addEventListener('click', (event) => {
     const link = event.target.dataset.link;
@@ -51,6 +52,8 @@ navMenu.addEventListener('click', (event) => {
     scrollIntoView(link);
 })
 
+const contactBtn = homeContent.querySelector('.home__contact');
+
 contactBtn.addEventListener('click', () => {
     scrollIntoView('#contact');
 })
@@ -59,3 +62,30 @@ function scrollIntoView(selector) {
     const scrollTo = document.querySelector(selector);
     scrollTo.scrollIntoView({ behavior: "smooth" });
 }
+
+//Filter work
+const workBtns = document.querySelector('.work__categories');
+const projects = document.querySelectorAll('.project');
+const projectContainer = document.querySelector('.work__projects');
+
+
+workBtns.addEventListener('click', (event) => {
+    const clicked = event.target.dataset.link || event.target.parentNode.dataset.link;
+    if (clicked == null) {
+        return;
+    }
+    projectContainer.classList.add('animation');
+
+    setTimeout(() => {
+        projects.forEach((work) => {
+            if (work.dataset.link === clicked || clicked === 'all') {
+                work.classList.remove('unshowing');
+            } else {
+                work.classList.add('unshowing');
+            }
+        })
+        projectContainer.classList.remove('animation');
+    }, 300);
+
+
+})

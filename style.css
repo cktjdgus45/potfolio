@@ -392,7 +392,15 @@ li {
   align-items: center;
   flex-wrap: wrap;
   margin-top: 45px;
+  opacity: 1;
+  transition: all var(--animation-duration) ease-out;
 }
+
+.animation{
+  opacity: 0;
+  transform: scale(0.96) translateY(20px);
+}
+
 .project{
   position: relative;
   width: 300px;
@@ -533,6 +541,9 @@ li {
 .showing{
   pointer-events: auto;
   opacity: 1;
+}
+.unshowing{
+  display: none;
 }
 
 /* media screen */
