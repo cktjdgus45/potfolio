@@ -102,3 +102,18 @@ workBtns.addEventListener('click', (event) => {
         projectContainer.classList.remove('animation');
     }, 300);
 })
+
+//toggle button
+
+const toggle = document.querySelector('.navbar__toggle-btn');
+let clicked = true;
+
+toggle.addEventListener('click', (event) => {
+    if (clicked) {
+        navMenu.style.display = 'flex';
+        clicked = false;
+    } else {
+        navMenu.style.display = 'none';
+        clicked = true;
+    }
+})

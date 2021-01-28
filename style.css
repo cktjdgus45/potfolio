@@ -572,6 +572,12 @@ li {
     width: 100%;
     flex-direction: column;
     color: var(--color-black);
+    background-color: var(--color-white);
+    border-radius: 25px;
+    display: none;
+  }
+  .navbar__menu__item:hover{
+    background-color: rgba(109, 52, 52, 0.5);
   }
   .about__majors{
     flex-direction: column;
