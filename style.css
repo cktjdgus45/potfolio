@@ -475,18 +475,14 @@ li {
 }
 
 .testimonial:nth-child(2){
-  flex-direction: row-reverse;
   margin-top: 30px;
 }
-.testimonial:nth-child(1) img{
+
+.testimonial img{
   flex-direction: row-reverse;
-  margin-right: 30px;
 }
 
-.testimonial:nth-child(2) img{
-  flex-direction: row-reverse;
-  margin-left: 30px;
-}
+
 
 .testimonial img{
   width: 130px;
@@ -495,6 +491,7 @@ li {
 }
 .testimonial__speach{
   background-color: var(--color-white);
+  border-radius: var(--border-radius-size);
   padding: 25px 10px;
 }
 .testimonial__speach p{
@@ -560,6 +557,19 @@ li {
 
 /* media screen */
 @media screen and (max-width:768px){
+  :root{
+    /* Font size */
+    --font-large : 30px;
+    --font-medium : 18px;
+    --font-regular : 16px;
+    --font-small : 14px;
+    --font-micro : 12px;
+  }
+
+  .section{
+    padding: 30px;
+  }
+
   .navbar__toggle-btn{
     display: block;
     top: 20px;
@@ -600,9 +610,22 @@ li {
   .project{
     flex-grow: 1;
   }
+  .testimonial{
+    flex-direction: column;
+  }
+
   .testimonial img{
     width: 80px;
     height: 80px;
+    margin-bottom: 8px;
+  }
+
+  .testimonial:nth-child(2){
+    flex-direction: column-reverse;
+  }
+
+  .work__categories{
+    flex-direction: column;
   }
 
   .return-button{
