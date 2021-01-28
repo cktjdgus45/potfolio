@@ -573,12 +573,16 @@ li {
     flex-direction: column;
     color: var(--color-black);
     background-color: var(--color-white);
-    border-radius: 25px;
+    border-radius: var(--border-radius-size);
     display: none;
   }
 
   .navbar__menu.open{
     display: block;
+  }
+
+  .navbar__menu__item{
+    margin-left: 0px;
   }
 
   .navbar__menu__item:hover{
