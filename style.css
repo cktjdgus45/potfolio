@@ -576,6 +576,11 @@ li {
     border-radius: 25px;
     display: none;
   }
+
+  .navbar__menu.open{
+    display: block;
+  }
+
   .navbar__menu__item:hover{
     background-color: rgba(109, 52, 52, 0.5);
   }

@@ -51,6 +51,7 @@ navMenu.addEventListener('click', (event) => {
     if (link == null) {
         return;
     }
+    navMenu.classList.remove('open');
     scrollIntoView(link);
 })
 
@@ -78,7 +79,6 @@ workBtns.addEventListener('click', (event) => {
     if (clicked == null) {
         return;
     }
-    //클릭한것만 변화
     filterBtns.forEach((btn) => {
         const count = btn.lastChild;
         if (clicked === btn.dataset.link) {
@@ -109,11 +109,5 @@ const toggle = document.querySelector('.navbar__toggle-btn');
 let clicked = true;
 
 toggle.addEventListener('click', (event) => {
-    if (clicked) {
-        navMenu.style.display = 'flex';
-        clicked = false;
-    } else {
-        navMenu.style.display = 'none';
-        clicked = true;
-    }
+    navMenu.classList.toggle('open');
 })
