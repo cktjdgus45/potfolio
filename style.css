@@ -129,7 +129,10 @@ li {
 #navbar.light-color{
   background-color: var(--color-light-green);
 }
-
+.navbar__active{
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.1);
+}
 .navbar__logo{
   display: flex;
   align-items: center;
@@ -360,18 +363,6 @@ li {
   border: 1px solid var(--color-light-grey);
   border-radius: var(--border-radius-size);
 }
-.category__btn:hover,
-.category__btn.active{
-  color: var(--color-white);
-  background-color: var(--color-pink);
-}
-.category__btn.active .category__count,
-.category__btn:hover .category__count{
-  top: 0;
-  left: 0;
-  opacity:1;
-}
-
 .category__count{
   transition: all var(--animation-duration) ease;
   position: relative;
@@ -386,6 +377,27 @@ li {
   border-radius: 50%;
   opacity: 0;
 }
+.category__btn:hover,
+.category__btn.active{
+  color: var(--color-white);
+  background-color: var(--color-pink);
+}
+.category__btn.active .category__count,
+.category__btn:hover .category__count{
+  top: 0;
+  left: 0;
+  opacity:1;
+}
+.btn{
+  color: var(--color-white);
+  background-color: var(--color-pink);
+}
+.clicked{
+  top: 0;
+  left: 0;
+  opacity:1;
+}
+
 .work__projects{
   display: flex;
   justify-content: center;

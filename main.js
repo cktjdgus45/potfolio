@@ -20,6 +20,7 @@ function handleNavScroll() {
         nav.classList.remove('light-color');
     }
 }
+
 //fade away slowly when scroll home
 function handleHomeScroll() {
     homeContent.style.opacity = 1 - (window.scrollY / homeHeight);
@@ -43,6 +44,7 @@ function showReturnBtn() {
 
 //scroll to section when clicked.
 const navMenu = document.querySelector('.navbar__menu');
+const navItems = navMenu.querySelectorAll('.navbar__menu__item');
 
 navMenu.addEventListener('click', (event) => {
     const link = event.target.dataset.link;
@@ -58,6 +60,7 @@ contactBtn.addEventListener('click', () => {
     scrollIntoView('#contact');
 })
 
+
 function scrollIntoView(selector) {
     const scrollTo = document.querySelector(selector);
     scrollTo.scrollIntoView({ behavior: "smooth" });
@@ -67,6 +70,7 @@ function scrollIntoView(selector) {
 const workBtns = document.querySelector('.work__categories');
 const projects = document.querySelectorAll('.project');
 const projectContainer = document.querySelector('.work__projects');
+const filterBtns = document.querySelectorAll('.category__btn');
 
 
 workBtns.addEventListener('click', (event) => {
@@ -74,6 +78,17 @@ workBtns.addEventListener('click', (event) => {
     if (clicked == null) {
         return;
     }
+    //클릭한것만 변화
+    filterBtns.forEach((btn) => {
+        const count = btn.lastChild;
+        if (clicked === btn.dataset.link) {
+            btn.classList.add('clicked', 'btn');
+            count.classList.add('clicked');
+        } else {
+            btn.classList.remove('clicked', 'btn');
+            count.classList.remove('clicked');
+        }
+    })
     projectContainer.classList.add('animation');
 
     setTimeout(() => {
@@ -86,6 +101,4 @@ workBtns.addEventListener('click', (event) => {
         })
         projectContainer.classList.remove('animation');
     }, 300);
-
-
 })
