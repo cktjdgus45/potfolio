@@ -536,8 +536,7 @@ li {
   border-radius: 50%;
   color: var(--color-white);
   background-color: var(--color-pink);
-  width: 60px;
-  height: 60px;
+  padding: 10px;
   opacity: 0;
   transition: opacity var(--animation-duration) ease-in;
   pointer-events: none;
@@ -634,6 +633,6 @@ li {
   }
 
   .return-button{
-    right: -4px;
+    right: 1px;
   }
 }
